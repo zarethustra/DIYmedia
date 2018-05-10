@@ -1,0 +1,16 @@
+---
+- hosts: NAS DEB-NAS TV-V2 stretch-tv
+
+  # gather_facts: False
+  become: true
+
+  roles:
+    - docker
+    - docker-compose
+    - mergerfs
+    - snapraid
+    - base-os
+    - login-banner
+    - fileshare
+    - snapraidrun
+    - docker-apps-install

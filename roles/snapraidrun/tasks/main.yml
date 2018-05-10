@@ -1,0 +1,4 @@
+---
+- name: snapraidrun
+  include: snapraidrun.yml
+  tags: snapraidrun
