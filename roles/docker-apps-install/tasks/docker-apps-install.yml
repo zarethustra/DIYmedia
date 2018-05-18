@@ -38,13 +38,13 @@
 
 - include: tvheadend.yml
 
-# - name: add zap2xml
-#   copy:
-#     src: "usr/bin/zap2xml.pl"
-#     dest: "/usr/bin/zap2xml.pl"
-#     owner: root
-#     group: root
-#     mode: 0777
+- name: add zap2xml
+  copy:
+    src: "usr/bin/zap2xml.pl"
+    dest: "/usr/bin/zap2xml.pl"
+    owner: root
+    group: root
+    mode: 0777
     
 # - name: ensure torrent download dir is present
 #   file:

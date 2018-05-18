@@ -31,6 +31,12 @@
     - JSON.pm
     - JSON/XS.pm
 
+- name: install perl https requirements
+  apt:
+    name: "liblwp-protocol-https-perl"
+    state: present
+    update_cache: yes
+
 - name: set up cron job
   cron:
     name: "Update TVschedule"

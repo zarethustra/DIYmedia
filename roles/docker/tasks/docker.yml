@@ -8,7 +8,6 @@
     - software-properties-common
     - gnupg2
 
-
 - name: add docker repository key
   apt_key:
     id: "{{ apt_key_sig }}"
@@ -19,7 +18,7 @@
 
 - name: add docker repository and update apt cache
   apt_repository:
-    repo: "{{ apt_repository }}"
+    repo: "{{ docker_apt_repository }}"
     update_cache: yes
     state: present
 

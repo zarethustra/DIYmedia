@@ -2,12 +2,15 @@
 # apt repository key
 apt_key_url: https://download.docker.com/linux/debian/gpg
 # apt repository key signature
-apt_key_sig: 0EBFCD88
+apt_key_sig: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
 
 # Line to be added to sources docker.list (release specific)
 # apt_repository: deb https://apt.dockerproject.org/repo debian-{{ ansible_distribution_release }} main
-apt_repository: deb [arch=amd64] https://download.docker.com/linux/debian {{ ansible_distribution_release }} stable
-
+# apt_repository: deb [arch=amd64] https://download.docker.com/linux/debian {{ ansible_distribution_release }} stable
+docker_apt_release_channel: stable
+docker_apt_arch: amd64
+docker_apt_repository: "deb [arch={{ docker_apt_arch }}] https://download.docker.com/linux/{{ ansible_distribution|lower }} {{ ansible_distribution_release }} {{ docker_apt_release_channel }}"
+docker_apt_ignore_key_error: True
 # The following help expose a docker port or to add additional options when
 # running docker daemon.  The default is to not use any special options.
 # docker_opts: >

@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 MAINTAINER IronicBadger <ironicbadger@linuxserver.io>
-ENV SNAPRAID_VERSION=11.0
+ENV SNAPRAID_VERSION=11.2
 
 # Builds SnapRAID from source
 RUN apt-get update && \
