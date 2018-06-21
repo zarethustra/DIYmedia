@@ -37,10 +37,10 @@
     state: present
     update_cache: yes
 
-- name: set up cron job
-  cron:
-    name: "Update TVschedule"
-    state: present
-    minute: "0"
-    hour: "6,18"
-    job: "zap2xml.pl -u fcclatterbaugh@yahoo.com -p fcczap -o /opt/appdata/tvheadend/config/data/listing.xml -d 3 -c /opt/appdata/tvheadend/config/data/cache -i /opt/appdata/tvheadend/config/data/icons -L -A -T -D -I"
+# - name: set up cron job
+#   cron:
+#     name: "Update TVschedule"
+#     state: present
+#     minute: "0"
+#     hour: "6,18"
+#     job: "zap2xml.pl -u fcclatterbaugh@yahoo.com -p fcczap -o /opt/appdata/tvheadend/config/data/listing.xml -d 3 -c /opt/appdata/tvheadend/config/data/cache -i /opt/appdata/tvheadend/config/data/icons -L -A -T -D -I"

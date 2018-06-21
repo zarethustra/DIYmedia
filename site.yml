@@ -12,5 +12,5 @@
     # - snapraid
     # - docker-apps-install
     # - login-banner
-    # - fileshare
+    - fileshare
     # - snapraidrun
